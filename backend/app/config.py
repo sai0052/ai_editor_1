@@ -9,12 +9,13 @@ class Settings(BaseSettings):
 
     app_name: str = "AutoCut"
     api_prefix: str = "/api"
-    app_url: str = "https://aieditor.website"
+    app_url: str = "https://ai-editor-1-1.onrender.com"
     cors_origins: str = (
         "http://localhost:5173,"
         "http://127.0.0.1:5173,"
         "https://aieditor.website,"
-        "https://www.aieditor.website"
+        "https://www.aieditor.website,"
+        "https://ai-editor-1-1.onrender.com"
     )
 
     @property
