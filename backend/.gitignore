@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+storage/uploads/*
+storage/jobs/*
+storage/temp/*
+!storage/uploads/.gitkeep
+!storage/jobs/.gitkeep
+!storage/temp/.gitkeep
+.env
+*.mp4
+*.wav
+*.srt

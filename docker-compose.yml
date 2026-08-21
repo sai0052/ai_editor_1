@@ -1,0 +1,36 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    env_file:
+      - ./backend/.env
+    environment:
+      APP_URL: https://aieditor.website
+      CORS_ORIGINS: http://localhost:5173,http://127.0.0.1:5173,https://aieditor.website,https://www.aieditor.website
+    volumes:
+      - job-storage:/app/storage
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      - backend
+      - frontend
+    restart: unless-stopped
+
+volumes:
+  job-storage:
+  caddy-data:
+  caddy-config:

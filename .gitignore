@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+backend/.venv/
+backend/storage/uploads/**
+backend/storage/jobs/**
+backend/storage/temp/**
+!backend/storage/**/.gitkeep
+__pycache__/
+*.pyc
+.env
+.godaddy.env
+*.mp4
+*.wav
