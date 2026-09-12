@@ -116,8 +116,4 @@ vercel domains verify aieditor.website
 
 > ⚠️ **Important:** Video processing (the FFmpeg backend) cannot run on Vercel. For full Auto Edit functionality, also host the FastAPI backend (e.g. via Docker Compose on a VPS) and point `/api` to it — or run the full stack with Docker.
 
----
-
-## 📄 License
-
-Add your license here.
+---.
